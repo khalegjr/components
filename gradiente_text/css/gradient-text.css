@@ -1,4 +1,6 @@
-/** lik indicado por Wenting Zhang: http://cssicon.space/ */
+/** lik indicado por Wenting Zhang: http://cssicon.space/ 
+http://css-mono.wentin.co/
+*/
 h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 2rem;
@@ -87,7 +89,7 @@ https://www.youtube.com/watch?v=Y0_FMCji3iE */
     width: 210px;
     height: 120px;
     border-bottom: solid 180px currentColor;
-    background-color: red;
+    /*background-color: red;*/
     border-radius: 0 0 0 100%;
     transform: rotate(-40deg);
     transform-origin: right 210px;
@@ -101,8 +103,45 @@ https://www.youtube.com/watch?v=Y0_FMCji3iE */
     width: 210px;
     height: 120px;
     border-bottom: solid 180px currentColor;
-    background-color: red;
+    /** background-color: red; */
     border-radius: 0 0 100% 0;
     transform: rotate(40deg);
     transform-origin: left 210px;
+}
+
+/** Animação para o Mustache */
+.mustache::before {
+    animation: shakeLeft 1s ease-in-out infinite;
+}
+
+.mustache::after {
+    animation: shakeRight 1s ease-in-out infinite;
+}
+
+@keyframes shakeLeft {
+    0% {
+        transform: rotate(-50deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(-50deg);
+    }
+}
+
+@keyframes shakeRight {
+    0% {
+        transform: rotate(50deg);
+    }
+
+    50% {
+        transform: rotate(30deg);
+    }
+
+    100% {
+        transform: rotate(50deg);
+    }
 }
