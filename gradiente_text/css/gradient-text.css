@@ -28,11 +28,12 @@ h2 {
 /** Código de testes de CSS
 Keyboard colorido : keyboard colored */
 
-.keyboard.icon::before {
+.keyboard.icon {
     content: '';
     position: absolute;
     width: 3px;
     height: 3px;
+    left: 400px;
     box-shadow: 
         -2px 0 0 -1px black,
         2px 0 0 -1px red,
@@ -64,6 +65,38 @@ Keyboard colorido : keyboard colored */
     border-left: solid 15px yellow;
     border-right: solid 30px yellow;
     border-bottom: solid 30px green;
+}
+
+.borders-top-left {
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    border-radius: 200px 0 0 0;
+    border: solid 6px black;
+}
+
+.borders-top-right {
+    width: 300px;
+    height: 300px;
+    background-color: green;
+    border-radius: 0 200px 0 0;
+    border: solid 6px black;
+}
+
+.borders-botton-right {
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+    border-radius: 0 0 200px 0;
+    border: solid 6px black;
+}
+
+.borders-botton-left {
+    width: 300px;
+    height: 300px;
+    background-color: violet;
+    border-radius: 0 0 0 200px;
+    border: solid 6px black;
 }
 
 /** construindo um bigode (mustache)
