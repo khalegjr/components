@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chart.js</title>
+</head>
+<body>
+    <!-- Start Canvas -> Desenhar elementos gráficos usando JS -->
+    <canvas class="line-chart"></canvas>
+
+    <!-- Inclui Chart.js via CDNJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+    <script>
+        // variável para definir o context
+        // pega todo elemento da classe line-chart
+        var ctx = document.getElementsByClassName("line-chart");
+
+        //Inicializar a variável com o gráfico
+        // (Contexto, {type, data, options})
+        var chartGraph = new Chart(ctx, {
+            type: 'line', // tipo de gráfico: linha
+            data: { // labels e dados
+                labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"],
+                datasets: [{
+                    label: "Taxa de Cliques - 2017", // rótulo de dados
+                    data: [5,10,7,14,20,25,18,12,8,15,20,7], // Array de dados
+                    borderWidth: 4, // Espessura da linha do gráfico
+                    borderColor: "rgba(77,166,253,0.85)", // Cor da linha do gráfico
+                    backgroundColor: "transparent"
+                },
+                {
+                    label: "Taxa de Cliques - 2018", // Título/rótulo
+                    data: [8,4,10,14,22,17], // Array de dados
+                    borderWidth: 4, // Espessura da linha do gráfico
+                    borderColor: "rgba(6,204,6,0.85)", // Cor da linha do gráfico
+                    backgroundColor: "transparent"
+                }
+                ]
+            },
+            options: {
+                title: { // Título do gráfico
+                    display: true,
+                    fontSize: 20,
+                    text: "Relatório de CTR Anual"
+                },
+                labels: { // Formata os labels
+                    fontStyle: "bold"
+                }
+            }
+        });
+    </script>
+    
+</body>
+</html>
